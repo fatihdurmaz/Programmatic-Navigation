@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct Programmatic_NavigationApp: App {
+    @State private var router = Router()
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environment(router)
         }
     }
 }
