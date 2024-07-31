@@ -8,11 +8,43 @@
 import SwiftUI
 
 struct CustomView: View {
+    let message: String
+    @Environment(Router.self) private var router
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+            Spacer()
+            Text(message)
+                .font(.largeTitle)
+            
+            Spacer()
+        }
+        .toolbar {
+            ToolbarItem {
+                Button("Go to Root"){
+                    router.navigateToRoot()
+                }
+            }
+        }
+        .navigationTitle("Custom View")
+        .safeAreaInset(edge: .bottom) {
+            
+            Text("Go to Todo List View")
+                .frame(maxWidth: .infinity)
+                .padding(.top, 10)
+                .foregroundStyle(.white)
+                .bold()
+                .background(.blue)
+                .onTapGesture {
+                    router.navigate(to: .todos(.list))
+                }
+            
+            
+        }
     }
 }
 
 #Preview {
-    CustomView()
+    CustomView(message: "Gelen Veri")
+        .environment(Router())
 }
