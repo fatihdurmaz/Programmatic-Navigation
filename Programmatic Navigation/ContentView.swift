@@ -28,8 +28,6 @@ struct ContentView: View {
                     }
                     
                     
-                    
-                    
                     Label {
                         Text("Posts")
                     } icon: {
