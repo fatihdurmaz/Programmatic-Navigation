@@ -1,5 +1,10 @@
 # Programmatic Navigation in SwiftUI
 
+![Swift](https://img.shields.io/badge/Swift-5.9-orange.svg)
+![Platform](https://img.shields.io/badge/Platform-iOS%20-red.svg)
+![Platform](https://img.shields.io/badge/SwiftUI-4-green.svg)
+![License](https://img.shields.io/badge/License-MIT-blue.svg)
+
 This project demonstrates how to implement programmatic navigation in a SwiftUI application using a Router class to manage navigation paths. The navigation in this project is controlled programmatically without relying solely on NavigationLink. This approach allows for more flexible and complex navigation flows.
 
 **Project Structure**
